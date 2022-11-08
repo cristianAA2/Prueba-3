@@ -141,18 +141,24 @@ function validar_zip(){
     var input = document.getElementById("zip");
     var div = document.getElementById("msj_zip");
 
-    if (input.value.length == 7){
-        if(!isNaN(input.value)){
-            div.innerText = "El codigo postal es valido";
-            div.className = "m-1 alert alert-success";
-            return true;
+    if (input.value != ""){
+        if (input.value.length ==7){
+            if(!isNaN(input.value)){
+                div.innerText = "El codigo postal es valido";
+                div.className = "m-1 alert alert-success";
+                return true;
+            }else{
+                div.innerText = "El codigo postal es invalido";
+                div.className = "m-1 alert alert-danger";
+                return false;
+            }
         }else{
-            div.innerText = "Debe ingresar un codigo postal";
+            div.innerText = "El codigo postal debe tener 7 numeros";
             div.className = "m-1 alert alert-danger";
             return false;
         }
     }else{
-        div.innerText = "El codigo postal tiene que tener 7 digitos";
+        div.innerText = "El codigo postal no puede quedar vacio";
         div.className = "m-1 alert alert-danger";
         return false;
     }

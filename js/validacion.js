@@ -169,18 +169,24 @@ function validar_phone(){
     var input = document.getElementById("phone");
     var div = document.getElementById("msj_phone");
 
-    if (input.value.length == 8){
-        if(!isNaN(input.value)){
-            div.innerText = "El numero ingresado es valido";
-            div.className = "m-1 alert alert-success";
-            return true;
+    if (input.value != ""){
+        if (input.value.length ==8){
+            if(!isNaN(input.value)){
+                div.innerText = "El telefono es valido";
+                div.className = "m-1 alert alert-success";
+                return true;
+            }else{
+                div.innerText = "El telefono es invalido";
+                div.className = "m-1 alert alert-danger";
+                return false;
+            }
         }else{
-            div.innerText = "El dato ingresado no es valido";
+            div.innerText = "El telefono debe tener 8 numeros";
             div.className = "m-1 alert alert-danger";
             return false;
         }
     }else{
-        div.innerText = "El Numero telefonico no puede quedar vacio";
+        div.innerText = "Debe ingresar un numero telefonico";
         div.className = "m-1 alert alert-danger";
         return false;
     }

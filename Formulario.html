@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <h2>Formulario de registro</h2>
+        <hr>
+        <form class="row g-3" action="exito.html" method="post" onsubmit="return validar()">
+            <!--Ingreso de correo -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">Correo electronico</label>
+                <input type="text" class="form-control" id="email" placeholder="mail@example.com">
+                <div id="msj_email"></div>
+            </div>
+            <!--Contraseña 1-->
+            <div class="col-md-3">
+                <label for="pass1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="pass1">
+                <div id="msj_pass1"></div>
+            </div>
+            <!--Contraseña 2-->
+            <div class="col-md-3">
+                <label for="pass2" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="pass2">
+                <div id="msj_pass2"></div>
+            </div>
+            <!--Direccion-->
+            <div class="col-md-6">
+                <label for="addr" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="addr" placeholder="Ingrese Su Direccion">
+                <div id="msj_addr"></div>
+            </div>
+            <!--Comuna-->
+            <div class="col-md-4">
+                <label for="comuna" class="form-label">Comuna</label>
+                <select id="comuna" class="form-select">
+                    <option value="" selected>Seleccione Su Comuna ...</option>
+                    <option value="1">Corral</option>
+                    <option value="2">Futrono</option>
+                    <option value="3">Lago Ranco</option>
+                    <option value="4">Lanco</option>
+                    <option value="5">La Unión</option>
+                    <option value="6">Los Lagos</option>
+                    <option value="7">Máfil</option>
+                    <option value="8">Mariquina</option>
+                    <option value="9">Río Bueno</option>
+                    <option value="10">Paillaco</option>
+                    <option value="11">Panguipulli</option>
+                    <option value="12">Valdivia</option>
+                </select>
+                <div id="msj_comuna"></div>
+            </div>
+            <!--Codigo postal-->
+            <div class="col-md-2">
+                <label for="zip" class="form-label">Código postal</label>
+                <input type="text" class="form-control" id="zip" placeholder="5090000">
+                <div id="msj_zip"></div>
+            </div>
+            <!--Numero telefonico-->
+            <div class="col-md-3">
+                <label for="phone" class="form-label">Numero Telefonico +56 9</label>
+                <input type="tel" class="form-control" id="phone" placeholder="12345678">
+                <div id="msj_phone"></div>
+            </div>
+            <!--Ingreso de URL-->
+            <div class="col-md-9">
+                <label for="URL" class="form-label">Ingrese una URL</label>
+                <input type="url" class="form-control" id="url" placeholder="https://example.com">
+                <div id="msj_url"></div>
+            </div>
+            <!--lista-->
+            <!--Validar el check-->
+            <div class="col-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="check">
+                <label class="form-check-label" for="check">
+                    Acepto las condiciones de uso
+                </label>
+                <div id="msj_check"></div>
+            </div>
+            </div>
+            <!--Registro-->
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>        
+        </form>
+    </div>
+
+    <script src="js/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
